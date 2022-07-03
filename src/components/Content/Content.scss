@@ -1,0 +1,33 @@
+
+@mixin movieContainer {
+  width: 200px;
+  height: 335px;
+  background: #394B61;
+  border-radius: 11px;
+  margin: 15px 12px;
+  animation: createBox .5s;
+  cursor: pointer;
+}
+
+.movieListContainer {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    
+    & .focusMovieContainer {
+      @include movieContainer();
+      border: 5px solid #00E0FF;
+    }
+    & .notfocusedMovieContainer {
+      @include movieContainer();
+    }
+}
+
+@keyframes createBox {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+}

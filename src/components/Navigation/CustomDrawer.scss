@@ -1,0 +1,33 @@
+.customDrawer {
+    background-color: #1F2A3C;
+    & .avatarContainer {
+        width: 100%;
+        height:200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        .avatar {
+            width: 100px;
+            height: 100px;
+            margin: 0px;
+            font-size: 2.5rem;
+            cursor: pointer;     
+        }
+        .avatarName {
+            margin-top: 10px;   
+            color: #D4D7DD;
+        }
+    }
+    
+    & .listItem {
+        color: #D4D7DD;
+    }
+    & .selected {
+        color: #00E0FF;
+    }
+    & .hrStyles {
+        background-color: #394B61;
+    }
+}
