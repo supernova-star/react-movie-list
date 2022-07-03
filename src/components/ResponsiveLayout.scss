@@ -1,19 +1,16 @@
 .searchContainer {
     & .searchBox {
         width: 0px !important;
-        // width:350px !important;
-        height: 40px;
+        height: 35px;
         margin-top: 20px;
         font-size: 16px !important;
         background-color: #273244 !important;
-        // background-color: #1A2536 !important;
         color: #273244;
         border: 0px !important;
         padding: 0px !important;
-        // padding: 0px 40px 0px 40px !important;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         &:focus {
-            width: 350px !important;
+            width: 50vw !important;
             color: white !important;
             padding: 0px 40px 0px 40px !important;
             background-color: #1A2536 !important;
@@ -22,23 +19,4 @@
             box-shadow: none !important;
         }
     }
-    & .clearIcon {
-        position: absolute;
-        top: 21px;
-        left: 310px;
-        z-index: 3;
-        animation: clearButtonSlide 1s ease forwards;
-    }
 }
-
-
-@keyframes clearButtonSlide {
-    from {
-        // left: 0px;
-        opacity: 0;
-    }
-    to {
-        // left: 310px;
-        opacity: 1;
-    }
-  }

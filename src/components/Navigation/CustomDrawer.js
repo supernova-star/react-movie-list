@@ -21,9 +21,10 @@ import { Typography } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { setSearchQuery, setSelectedMovie } from "../../reducers/movieList.slice";
 
-const CustomDrawer = () => {
+const CustomDrawer = ({handleDrawer}) => {
   const dispatch = useDispatch();
   const reset = () => {
+    handleDrawer();
     dispatch(setSelectedMovie({}));
     dispatch(setSearchQuery(""));
   }

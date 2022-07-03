@@ -66,7 +66,7 @@ const ResponsiveDrawer = (props) => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none" }, mt:2   }}
           >
             <MenuIcon />
           </IconButton>
@@ -76,7 +76,7 @@ const ResponsiveDrawer = (props) => {
                 color="inherit"
                 aria-label="open input"
                 onClick={openInput}
-                sx={{ position: "absolute", top: "21px", left: "0px" }}
+                sx={{ position: "absolute", top: "20px", left: "0px" }}
               >
                 <SearchIcon />
               </IconButton>
@@ -100,6 +100,7 @@ const ResponsiveDrawer = (props) => {
         handleDrawerToggle={handleDrawerToggle}
         drawerWidth={drawerWidth}
         container={container}
+        handleDrawer={handleDrawerToggle}
       />
       <Content drawerWidth={drawerWidth} list={renderedList} />
     </Box>

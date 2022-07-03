@@ -8,6 +8,7 @@ const Navigation = ({
   handleDrawerToggle,
   drawerWidth,
   container,
+  handleDrawer,
 }) => {
   return (
     <Box
@@ -28,7 +29,7 @@ const Navigation = ({
           "& .MuiDrawer-paper": {backgroundColor:"#1F2A3C", boxSizing: "border-box", width: drawerWidth },
         }}
       >
-        <CustomDrawer />
+        <CustomDrawer handleDrawer={handleDrawer} />
       </Drawer>
       <Drawer
         variant="permanent"
@@ -38,7 +39,7 @@ const Navigation = ({
         }}
         open
       >
-        <CustomDrawer />
+        <CustomDrawer handleDrawer={handleDrawer} />
       </Drawer>
     </Box>
   );
