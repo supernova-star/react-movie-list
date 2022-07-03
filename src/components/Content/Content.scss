@@ -1,12 +1,23 @@
 
 @mixin movieContainer {
-  width: 200px;
-  height: 335px;
+  width: 12vw;
+  height: 22vw;
+  font-size: 1vw;
   background: #394B61;
   border-radius: 11px;
-  margin: 15px 12px;
+  margin: 1vw 0.6vw;
+  padding-top: 1vw;
   animation: createBox .5s;
   cursor: pointer;
+  .footerContainer{
+    padding-left: 0.7vw;  
+    .footerButton {
+      width: 1.7vw;
+      height: 1.7vw;
+      margin-right: 0.2vw;
+    }
+  }
+  
 }
 
 .movieListContainer {
@@ -16,7 +27,8 @@
     
     & .focusMovieContainer {
       @include movieContainer();
-      border: 5px solid #00E0FF;
+      border: 0.3vw solid #00E0FF;
+      
     }
     & .notfocusedMovieContainer {
       @include movieContainer();

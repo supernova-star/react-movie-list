@@ -33,12 +33,12 @@ const Content = ({ drawerWidth, list }) => {
       )}
       <div className="movieListContainer" ref={movieListContainerRef}>
         {list && list.map((movie) => (
-          <div key={movie.id} className={`${movie.focused ? "focusMovieContainer" : "notfocusedMovieContainer"} d-flex flex-column pt-2 px-2`} onClick={()=>selectMovie(movie)}>
+          <div key={movie.id} className={`${movie.focused ? "focusMovieContainer" : "notfocusedMovieContainer"} d-flex flex-column`} onClick={()=>selectMovie(movie)}>
             <Box
             component="img"
             sx={{
-              height: 230,
-              width: 160 ,
+              height: "14vw",
+              width: "10vw" ,
               borderRadius: "5px",
               alignSelf: "center"
             }}
@@ -46,13 +46,13 @@ const Content = ({ drawerWidth, list }) => {
             src={movie.Poster}
             />
             <Typography variant="h6" sx={{
-              fontSize: "16px",
-              paddingLeft: "12px",
-              marginTop: "5px"
+              fontSize: "1.2em",
+              paddingLeft: "0.7vw",
+              marginTop: "0.5vw"
             }}> {movie.Title} </Typography>
-            <div className="d-flex flex-row ms-2">
-              <PlayCircleOutlineIcon className="mt-1 ms-1 me-2" />
-              <AddCircleOutlineIcon className="mt-1" />
+            <div className="d-flex flex-row footerContainer">
+              <PlayCircleOutlineIcon className="footerButton" />
+              <AddCircleOutlineIcon className="footerButton" />
             </div>
           </div>
         ))}

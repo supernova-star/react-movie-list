@@ -19,7 +19,7 @@ import { setSearchQuery, setSelectedMovie } from "../reducers/movieList.slice";
 const ResponsiveDrawer = (props) => {
   const dispatch = useDispatch();
   const search = useRef(null);
-  const drawerWidth = 300;
+  const drawerWidth = 250;
   const list = useSelector((state) => state.movieList.movieList);
   const query = useSelector((state) => state.movieList.searchQuery);
   const { windowProp } = props;
